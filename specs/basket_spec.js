@@ -35,9 +35,7 @@ describe('Basket Test', function(){
   it('should be discounted over £20', function(){
     basket.add(item2);
     basket.checkout();
-
-    assert.strictEqual();
-
+    assert.strictEqual(18, basket.finalPrice);
   })
 
   

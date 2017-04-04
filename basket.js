@@ -1,6 +1,7 @@
 var Basket = function(){
   this.items = [];
   this.beforeDiscount = 0;
+  
 }
 
 Basket.prototype= {
