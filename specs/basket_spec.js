@@ -43,6 +43,18 @@ describe('Basket Test', function(){
         assert.strictEqual(true, basket.discountCard);
   })
 
+  it('dscount card gives 5% discount', function(){
+    basket.addCard();
+    basket.add(item);
+    basket.checkout();
+    assert.strictEqual(1.9, basket.finalPrice);
+  })
+
+
+
+
+
+
   
 
 

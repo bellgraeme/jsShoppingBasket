@@ -22,9 +22,12 @@ Basket.prototype= {
       }
     },
   checkout: function(){
-    this.finalPrice = 0;
+    this.finalPrice = this.beforeDiscount;
     if(this.beforeDiscount >= 20){
      this.finalPrice = this.beforeDiscount * 0.9;
+    }
+    if(this.discountCard){
+      this.finalPrice = this.finalPrice * 0.95;
     }
     return this.finalPrice;
   },
