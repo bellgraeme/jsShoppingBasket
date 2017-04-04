@@ -26,6 +26,8 @@ describe('Basket Test', function(){
 
     basket.add(item);
     assert.strictEqual(2, basket.totalPrice);
+    basket.remove(item)
+    assert.strictEqual(0, basket.totalPrice);
   })
 
   
