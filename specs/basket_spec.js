@@ -22,6 +22,12 @@ describe('Basket Test', function(){
     assert.strictEqual(0, basket.itemCount());
   })
 
+  it('should have totalPrice', function(){
+
+    basket.add(item);
+    assert.strictEqual(2, basket.totalPrice);
+  })
+
   
 
 
