@@ -14,13 +14,12 @@ describe('Basket Test', function(){
 
   })
 
-
-
-
-
   it('should have multiple items and adjustable', function(){
     basket.add(item);
+
     assert.strictEqual(1, basket.itemCount());
+    basket.remove(item);
+    assert.strictEqual(0, basket.itemCount());
   })
 
   
