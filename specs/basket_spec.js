@@ -7,10 +7,12 @@ describe('Basket Test', function(){
 
   var basket;
   var item;
+  var item2;
 
   beforeEach(function(){
     basket = new Basket();
     item = new Item('Mars', 2 , true);
+    item2 = new Item('iTunes', 20 , true);
 
   })
 
@@ -22,12 +24,20 @@ describe('Basket Test', function(){
     assert.strictEqual(0, basket.itemCount());
   })
 
-  it('should have totalPrice', function(){
+  it('should have beforeDiscount', function(){
 
     basket.add(item);
-    assert.strictEqual(2, basket.totalPrice);
+    assert.strictEqual(2, basket.beforeDiscount);
     basket.remove(item)
-    assert.strictEqual(0, basket.totalPrice);
+    assert.strictEqual(0, basket.beforeDiscount);
+  })
+
+  it('should be discounted over £20', function(){
+    basket.add(item2);
+    basket.checkout();
+
+    assert.strictEqual();
+
   })
 
   
