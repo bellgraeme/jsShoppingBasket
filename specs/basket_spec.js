@@ -38,6 +38,11 @@ describe('Basket Test', function(){
     assert.strictEqual(18, basket.finalPrice);
   })
 
+  it('basket has DiscountCard', function(){
+    basket.addCard();
+        assert.strictEqual(true, basket.discountCard);
+  })
+
   
 
 

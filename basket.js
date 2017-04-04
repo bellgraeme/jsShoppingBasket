@@ -1,7 +1,7 @@
 var Basket = function(){
   this.items = [];
   this.beforeDiscount = 0;
-  
+  this.discountCard = false;
 }
 
 Basket.prototype= {
@@ -27,6 +27,9 @@ Basket.prototype= {
      this.finalPrice = this.beforeDiscount * 0.9;
     }
     return this.finalPrice;
+  },
+  addCard: function(){
+    this.discountCard = true;
   }
 }
 
